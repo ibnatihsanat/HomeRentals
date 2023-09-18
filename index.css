@@ -338,6 +338,15 @@ table {
     border: none;
 }
 
+#btn-3:hover,
+#btn-2:hover,
+#btn-1:hover,
+#btn-4:hover,
+#btn-5:hover {
+    background-color: #F4511E;
+    color: white;
+}
+
 .choices {
     display: flex;
     margin-top: 5rem;
