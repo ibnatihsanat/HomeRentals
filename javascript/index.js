@@ -12,8 +12,8 @@ dropzone.addEventListener('drop', (e) => {
         if (file.type.match('image/jpeg') || file.type.match('image/jpg') || file.type.match('image/png')) {
             const img = document.createElement('img');
             img.setAttribute('draggable', 'false');
-            // img.style.maxWidth = '12rem';
-            // img.style.maxHeight = '6rem';
+            img.style.maxWidth = '12rem';
+            img.style.maxHeight = '6rem';
 
             const reader = new FileReader();
             reader.onload = (event) => {
@@ -33,17 +33,17 @@ dropzone.addEventListener('drop', (e) => {
 });
 
 // FORM
+const picture = document.querySelector('.pic')
 const item_address = document.querySelector('.address');
 const room_types = document.querySelector('#room-type');
 const item_price = document.querySelector('.price');
 const add_btn = document.querySelector('.propertybtn');
-// const propertyItemsContainer = document.querySelector('.property-items'); // Container div
-
 // Get the select element
+
+const newProperty = document.createElement('div');
+newProperty.className = 'one';
 add_btn.addEventListener('click', (e) => {
     e.preventDefault();
-    const newProperty = document.createElement('div');
-    newProperty.className = 'one';
 
     // Create a new div for each card
     const location = document.createElement('h5');
@@ -76,7 +76,6 @@ add_btn.addEventListener('click', (e) => {
     newProperty.appendChild(propertytable);
     const propertyResult = document.querySelector('address');
     propertyResult.appendChild(newProperty);
-    // propertyItemsContainer.appendChild(propertyResult)
 });
 
 // console.log('my name is deeyj')

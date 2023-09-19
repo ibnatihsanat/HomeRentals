@@ -62,3 +62,54 @@ const upload = (image) => {
   droparea.setAttribute("class", "droparea valid");
   droparea.innerText = "Added " + image.name;
 };
+
+
+const item_address = document.querySelector('.address');
+const room_types = document.querySelector('#room-type');
+const item_price = document.querySelector('.price');
+const add_btn = document.querySelector('.propertybtn');
+const propertyItemsContainer = document.querySelector('.property-items'); // Container div
+
+add_btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Create a new div for each card
+    const newProperty = document.createElement('div');
+    newProperty.className = 'one';
+
+    // Create and append the location element
+    const location = document.createElement('h5');
+    const locationtVal = document.createTextNode(item_address.value);
+    location.appendChild(locationtVal);
+    newProperty.appendChild(location);
+
+    // Get the value of the selected option from the dropdown and append it
+    const selectedRoom = document.createElement('h6');
+    const selectedRoomText = document.createTextNode(room_types.value);
+    selectedRoom.appendChild(selectedRoomText);
+    newProperty.appendChild(selectedRoom);
+
+    // Create and append the price element
+    const priceValue = document.createElement('h4');
+    const priceValueText = document.createTextNode(`$ ${item_price.value}/month`);
+    priceValue.appendChild(priceValueText);
+    newProperty.appendChild(priceValue);
+
+    // Create and append the property table
+    const propertytable = document.createElement('table');
+    propertytable.className = 'property-icons';
+    propertytable.innerHTML = `
+        <tbody>
+            <tr>s
+                <td><img src="./icons/Bed.svg" alt="">4</td>
+                <td class="tdleft"><img src="./icons/Shower.svg" alt="">3</td>
+                <td class="tdleft"><img src="./icons/Size.svg" alt="">2</td>
+            </tr>
+        </tbody>
+    `;
+    newProperty.appendChild(propertytable);
+
+    // Append the new item to the container
+    propertyItemsContainer.appendChild(newProperty);
+});
+
