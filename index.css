@@ -172,6 +172,7 @@ article p {
 .properties {
     margin-left: 8rem;
     margin-top: 3rem;
+    height: auto;
 }
 
 .properties-main {
@@ -211,8 +212,12 @@ article p {
     margin-top: 3rem;
 }
 
-address {
-    margin-left: 3rem;
+.last {
+    margin-left: 5rem;
+}
+
+.second {
+    margin-left: 5rem;
 }
 
 .pics {
@@ -220,12 +225,7 @@ address {
     height: 15rem;
 }
 
-.one h5,
-.two h5,
-.three h5,
-.four h5,
-.five h5,
-.six h5 {
+.one h5 {
     font-family: 'DM Sans';
     font-size: 1.2rem;
     font-weight: 700;
@@ -234,12 +234,7 @@ address {
     width: 12.5rem;
 }
 
-.one h6,
-.two h6,
-.three h6,
-.four h6,
-.five h6,
-.six h6 {
+.one h6 {
     font-family: ' DM Sans';
     font-size: 0.6rem;
     font-weight: 400;
@@ -248,12 +243,7 @@ address {
     margin-bottom: -1rem;
 }
 
-.one h4,
-.two h4,
-.three h4,
-.four h4,
-.five h4,
-.six h4 {
+.one h4 {
     font-family: 'DM Sans';
     font-size: 1rem;
     font-weight: 700;
@@ -261,24 +251,15 @@ address {
     color: #F4511E;
 }
 
-.one,
-.two,
-.three,
-.four,
-.five,
-.six {
+.one {
     border: 2px solid #d4cece;
     border-radius: 1.5rem;
     margin-bottom: 3rem;
+    width: 19rem;
 }
 
-.one:hover,
-.two:hover,
-.three:hover,
-.four:hover,
-.five:hover,
-.six:hover {
-    box-shadow: 0rem 0rem 0.5rem .2rem rgba(0, 0, 0, 0.1);
+.one:hover {
+    box-shadow: 0rem 0rem 0.9rem .5rem rgba(0, 0, 0, 0.1);
     border: 2px solid #E6E6E6;
 }
 
@@ -304,7 +285,7 @@ table {
     border: .125rem solid hsl(0, 25%, 97%);
     width: 20%;
     margin-left: 40%;
-    border-radius: .3rem;
+    border-radius: .6rem;
 }
 
 #btn-1,
@@ -324,11 +305,6 @@ table {
     border-left: .125rem solid hsl(0, 25%, 97%);
 }
 
-#btn-3 {
-    border-left: .125rem solid hsl(0, 25%, 97%);
-    border-right: .125rem solid hsl(0, 25%, 97%);
-}
-
 #btn-3,
 #btn-4,
 #btn-2 {
@@ -345,6 +321,15 @@ table {
 #btn-5:hover {
     background-color: #F4511E;
     color: white;
+}
+
+#btn-3:active,
+#btn-2:active,
+#btn-1:active,
+#btn-4:active,
+#btn-5:active {
+    background-color: #dfdddd;
+    color: #ccc;
 }
 
 .choices {
@@ -473,10 +458,29 @@ table {
 
 .form-items {
     display: flex;
-    margin-left: 3rem;
+    margin-left: 5rem;
     font-family: 'Poppins';
     font-size: 1rem;
     font-weight: 600;
+    margin-top: 5rem;
+}
+
+.form-items label {
+    margin-top: -2rem;
+    width: 8rem;
+}
+
+.form-items input,
+.form-items select {
+    margin-left: -8rem;
+}
+
+.p {
+    margin-left: 3.2rem;
+}
+
+.R {
+    margin-left: 3.4rem;
 }
 
 .rental-form h2 {
@@ -514,13 +518,17 @@ table {
     background-color: #F9F9F9;
 }
 
-.form-items input,
-.form-items select,
-.form-items label {
-    margin: 0rem 1rem 2rem 2rem;
+#room-type {
+    font-family: ' DM Sans';
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-align: left;
+    color: #818181;
+    margin-bottom: -1rem;
 }
 
 #description {
+    margin-top: 2rem;
     margin-left: 5rem;
 }
 

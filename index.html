@@ -131,7 +131,7 @@
                 <button id="allproperties">View All Property</button>
             </div>
             <div class="property-items">
-                <summary>
+                <address>
                     <div class="one">
                         <img src="./images/first.png" alt="" class="pics">
                         <h5>2578 Folsom street, san francisco, CA, 94110</h5>
@@ -147,7 +147,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="four">
+                    <div class="one">
                         <img src="./images/fourth.png" alt="" class="pics">
                         <h5>2578 Folsom street, san francisco, CA, 94110</h5>
                         <h6>Private Room</h6>
@@ -162,9 +162,9 @@
                             </tbody>
                         </table>
                     </div>
-                </summary>
-                <address>
-                    <div class="two">
+                </address>
+                <address class="second">
+                    <div class="one">
                         <img src="./images/second.png" alt="" class="pics">
                         <h5>2578 Folsom street, san francisco, CA, 94110</h5>
                         <h6>Private Room</h6>
@@ -179,7 +179,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="five">
+                    <div class="one">
                         <img src="./images/fifth.png" alt="" class="pics">
                         <h5>2578 Folsom street, san francisco, CA, 94110</h5>
                         <h6>Private Room</h6>
@@ -195,8 +195,8 @@
                         </table>
                     </div>
                 </address>
-                <address>
-                    <div class="three">
+                <address class="last">
+                    <div class="one">
                         <img src="./images/third.png" alt="" class="pics">
                         <h5>2578 Folsom street, san francisco, CA, 94110</h5>
                         <h6>Private Room</h6>
@@ -211,7 +211,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="six">
+                    <div class="one">
                         <img src="./images/sixth.png" alt="" class="pics">
                         <h5>2578 Folsom street, san francisco, CA, 94110</h5>
                         <h6>Private Room</h6>
@@ -273,42 +273,17 @@
             <form action="" class="rental-form">
                 <h2>Add A New Property</h2>
                 <div class="form-items">
-                    <div class="form-one">
-                        <label for="fullname">Name <i>*</i></label><br>
-                        <input type="text" placeholder="Enter Name" required><br>
-                        <label for="">City<i>*</i></label> <br>
-                        <select name="cities" id="cities"><br>
-                            <option value="" disabled selected>City</option>
-                            <option value="">ABUJA</option>
-                            <option value="">ADIS ABABA</option>
-                            <option value="">ACCRA</option>
-                            <option value="">NEW YORK</option>
-                        </select> <br>
-                        <label for="price">Price <i>*</i></label><br>
-                        <input type="number" placeholder="Enter Price" required><br>
-                    </div>
-                    <div class="form-two">
-                        <label for="">Address <i>*</i></label><br>
-                        <input type="text" placeholder="Enter Address" required><br>
-                        <label for="">State <i>*</i></label> <br>
-                        <select name="state" id="state"><br>
-                            <option value="" disabled selected>State</option>
-                            <option value="">ABIA</option>
-                            <option value="">ADAMAWA</option>
-                            <option value="">GUSAU</option>
-                        </select><br>
-                    </div>
-                    <div class="form-three">
-                        <label for="">Unit Number <i>*</i></label><br>
-                        <input type="number" placeholder="Enter Unit" required><br>
-                        <label for="">Room Type <i>*</i></label> <br>
-                        <select name="" id=""><br>
-                            <option value="" disabled selected>Room Type</option>
-                            <option value="">SINGLE</option>
-                            <option value="">BALCONY ROOM</option>
-                            <option value="">DOUBLE</option>
-                        </select><br>
-                    </div>
+                    <label for="">Address <i>*</i></label><br>
+                    <input type="text" placeholder="Enter Address" required class="address"><br>
+                    <label for="price" class="p">Price <i>*</i></label><br>
+                    <input type="number" placeholder="Enter Price" required class="price"><br>
+                    <label for="" class="R">Room Type <i>*</i></label> <br>
+                    <select name="room-type" id="room-type"><br>
+                        <option value="" disabled selected>Room Type</option>
+                        <option value="SINGLE ROOM">PRIVATE ROOM</option>
+                        <option value="BALCONY ROOM">BALCONY ROOM</option>
+                        <option value="DOUBLE ROOM">DOUBLE ROOM</option>
+                    </select><br>
                 </div>
                 <div id="description">
                     <label for="">Description <i>*</i></label><br>
@@ -320,7 +295,7 @@
                         <p>Drag your images here or <a href="https://www.google.com">Browse</a></p>
                         <h6>Supported:JPG,JPEG,PNG</h6>
                     </div>
-                    <button>Add New Property</button>
+                    <button class="propertybtn">Add New Property</button>
                 </div>
             </form>
         </section>
