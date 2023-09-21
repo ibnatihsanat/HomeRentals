@@ -25,6 +25,8 @@ select:focus {
 
 header {
     background-image: url(./images/headerBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: linear-gradient(200.44deg, rgba(0, 0, 0, 0.0001) 16.41%, rgba(0, 0, 0, 0.51) 77.16%);
     width: 100%;
     height: 45rem;
@@ -118,10 +120,11 @@ article p {
 }
 
 .about {
-    margin-left: 5rem;
+    width: 100%;
 }
 
 .about h1 {
+    margin-left: 5rem;
     font-family: "Inter";
     font-size: 2rem;
     font-weight: 800;
@@ -131,14 +134,20 @@ article p {
     margin-bottom: -1rem;
 }
 
+#aboutline {
+    margin-left: 5rem;
+}
+
 .about-items {
     display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-items img {
     width: 22.1875rem;
     height: 28.5625rem;
-    margin-left: -2rem;
 }
 
 .about-icons {
@@ -170,13 +179,16 @@ article p {
 }
 
 .properties {
-    margin-left: 8rem;
+    width: 100%;
     margin-top: 3rem;
     height: auto;
 }
 
 .properties-main {
     display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    margin: 0rem 6rem;
 }
 
 .properties h1 {
@@ -198,26 +210,21 @@ article p {
     background: #F4511E;
     border: none;
     border-radius: .3125rem;
-    margin-left: 50rem;
-    margin-top: 3.5rem;
-}
-
-.properties-main img {
     margin-top: 3rem;
-    margin-left: -15.7rem;
 }
 
 .property-items {
-    display: flex;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     margin-top: 3rem;
-}
-
-.last {
     margin-left: 5rem;
-}
-
-.second {
-    margin-left: 5rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: normal;
+    row-gap: 30px;
 }
 
 .pics {
@@ -261,6 +268,7 @@ article p {
 .one:hover {
     box-shadow: 0rem 0rem 0.9rem .5rem rgba(0, 0, 0, 0.1);
     border: 2px solid #E6E6E6;
+    transform: scale(1.1);
 }
 
 .property-icons td {
@@ -334,12 +342,14 @@ table {
 
 .choices {
     display: flex;
-    margin-top: 5rem;
-    margin-left: 3rem;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40rem;
+    margin: 0rem 7rem;
 }
 
 .pictures {
-    margin-left: 3rem;
     display: flex;
 }
 
@@ -404,7 +414,7 @@ table {
 
 .choices-writeup {
     margin-top: 5rem;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
     width: 25rem;
 }
 
@@ -437,6 +447,7 @@ table {
 
 .application-form {
     margin-top: 10rem;
+    width: 100%;
 }
 
 .application-form h1 {
@@ -448,7 +459,8 @@ table {
 }
 
 .rental-form {
-    width: 80%;
+    width: 100%;
+    max-width: 65rem;
     height: auto;
     background-color: #FFFFFF;
     margin-left: 8rem;
@@ -458,29 +470,24 @@ table {
 
 .form-items {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
     margin-left: 5rem;
-    font-family: 'Poppins';
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 5rem;
 }
 
-.form-items label {
-    margin-top: -2rem;
-    width: 8rem;
+.form-items input {
+    margin-bottom: 2rem;
 }
 
-.form-items input,
 .form-items select {
-    margin-left: -8rem;
+    margin-bottom: 2rem;
 }
 
-.p {
-    margin-left: 3.2rem;
-}
-
-.R {
-    margin-left: 3.4rem;
+.formone,
+.formtwo,
+.formthree {
+    width: 100%;
 }
 
 .rental-form h2 {
@@ -524,27 +531,31 @@ table {
     font-weight: 400;
     text-align: left;
     color: #818181;
-    margin-bottom: -1rem;
 }
 
 #description {
     margin-top: 2rem;
     margin-left: 5rem;
+    width: 100%;
 }
 
 textarea {
-    width: 90%;
+    width: 85%;
+    max-width: 60rem;
     height: 10rem;
     background-color: #F9F9F9;
     border-radius: 0.2rem;
+    resize: none;
 }
 
 .imageupload {
     margin-left: 5rem;
+    width: 100%;
 }
 
 .imageZone {
-    width: 90%;
+    width: 85%;
+    max-width: 60rem;
     height: 6rem;
     text-align: center;
     border: 2px dashed #F4511E;
@@ -575,15 +586,22 @@ textarea {
     margin-top: -0.5rem;
 }
 
-.imageupload button {
-    width: 20rem;
+.addnew {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.addnew button {
+    width: 100%;
+    max-width: 25rem;
     height: 3rem;
     border-radius: 0.55rem;
     background-color: #F4511E;
     color: #FFFFFF;
     border: none;
     margin: 2rem 0rem;
-    margin-left: 16rem;
 }
 
 .hustler-slider {
@@ -649,8 +667,13 @@ textarea {
     cursor: pointer;
 }
 
+.hellohustler {
+    width: 100%;
+}
+
 .hellohustler img {
-    width: 35.2rem;
+    width: 100%;
+    max-width: 60rem;
     height: 30rem;
 }
 

@@ -12,8 +12,8 @@ dropzone.addEventListener('drop', (e) => {
         if (file.type.match('image/jpeg') || file.type.match('image/jpg') || file.type.match('image/png')) {
             const img = document.createElement('img');
             img.setAttribute('draggable', 'false');
-            img.style.maxWidth = '12rem';
-            img.style.maxHeight = '6rem';
+            // img.style.maxWidth = '12rem';
+            // img.style.maxHeight = '6rem';
 
             const reader = new FileReader();
             reader.onload = (event) => {
@@ -24,8 +24,7 @@ dropzone.addEventListener('drop', (e) => {
             dropzone.appendChild(img);
             newProperty.appendChild(img);
             img.style.borderRadius = '1rem 1rem 0rem 0rem';
-            img.className = 'pics';
-
+            img.className = 'pics'
         } else {
             alert('Please drop a valid image (png, jpeg, jpg).');
         }
@@ -33,8 +32,7 @@ dropzone.addEventListener('drop', (e) => {
 });
 
 // FORM
-const picture = document.querySelector('.pic')
-const item_address = document.querySelector('.address');
+const item_address = document.querySelector('.address')
 const room_types = document.querySelector('#room-type');
 const item_price = document.querySelector('.price');
 const add_btn = document.querySelector('.propertybtn');
@@ -74,7 +72,7 @@ add_btn.addEventListener('click', (e) => {
     </tbody>
 `;
     newProperty.appendChild(propertytable);
-    const propertyResult = document.querySelector('address');
+    const propertyResult = document.querySelector('.property-items');
     propertyResult.appendChild(newProperty);
 });
 

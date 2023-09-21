@@ -69,7 +69,7 @@
     <main>
         <section class="about">
             <h1>minimum living cost takes care of everything</h1>
-            <img src="./icons/aboutline.svg" alt="">
+            <img src="./icons/aboutline.svg" alt="" id="aboutline">
             <div class="about-items">
                 <img src="./images/about.png" alt="">
                 <div class="about-icons">
@@ -126,8 +126,7 @@
         </section> -->
         <section class="properties">
             <div class="properties-main">
-                <h1>list of properties</h1>
-                <img src="./icons/propertiesline.svg" alt="">
+                <h1>list of properties </h1>
                 <button id="allproperties">View All Property</button>
             </div>
             <div class="property-items">
@@ -195,7 +194,7 @@
                         </table>
                     </div>
                 </address>
-                <address class="last">
+                <address>
                     <div class="one">
                         <img src="./images/third.png" alt="" class="pics">
                         <h5>2578 Folsom street, san francisco, CA, 94110</h5>
@@ -273,17 +272,44 @@
             <form action="" class="rental-form">
                 <h2>Add A New Property</h2>
                 <div class="form-items">
-                    <label for="">Address <i>*</i></label><br>
-                    <input type="text" placeholder="Enter Address" required class="address"><br>
-                    <label for="price" class="p">Price <i>*</i></label><br>
-                    <input type="number" placeholder="Enter Price" required class="price"><br>
-                    <label for="" class="R">Room Type <i>*</i></label> <br>
-                    <select name="room-type" id="room-type"><br>
-                        <option value="" disabled selected>Room Type</option>
-                        <option value="SINGLE ROOM">PRIVATE ROOM</option>
-                        <option value="BALCONY ROOM">BALCONY ROOM</option>
-                        <option value="DOUBLE ROOM">DOUBLE ROOM</option>
-                    </select><br>
+                    <div class="formone">
+                        <label for="">Name<i>*</i></label><br>
+                        <input type="text" placeholder="Enter Name" required class="name"><br>
+
+                        <label for="">Address <i>*</i></label><br>
+                        <input type="text" placeholder="Enter Address" required class="address"><br>
+
+                        <label for="price">Price <i>*</i></label><br>
+                        <input type="number" placeholder="Enter Price" required class="price"><br>
+
+                    </div>
+                    <div class="formtwo">
+
+                        <label for="">City <i>*</i></label> <br>
+                        <select name="cities" id="cities"> <br>
+                            <option value="" disabled selected>City</option>
+                            <option value="">abia</option>
+                        </select><br>
+
+                        <label for="" id="">Unit Number <i>*</i></label> <br>
+                        <input type="text" placeholder="Enter Unit Number" required> <br>
+
+                        <label for="">State<i>*</i></label> <br>
+                        <select name="state" id="states">
+                            <option value="" disabled selected>State</option>
+                            <option value="">weeyd</option>
+                        </select>
+                    </div>
+                    <div class="formthree">
+                        <label for="">Room Type <i>*</i></label> <br>
+                        <select name="room-type" id="room-type"><br>
+                            <option value="" disabled selected>Room Type</option>
+                            <option value="SINGLE ROOM">PRIVATE ROOM</option>
+                            <option value="BALCONY ROOM">BALCONY ROOM</option>
+                            <option value="DOUBLE ROOM">DOUBLE ROOM</option>
+                        </select><br>
+
+                    </div>
                 </div>
                 <div id="description">
                     <label for="">Description <i>*</i></label><br>
@@ -292,11 +318,14 @@
                 <div class="imageupload">
                     <label for="">Upload photos</label>
                     <div class="imageZone" id="dropzone" draggable="true">
-                        <p>Drag your images here or <a href="https://www.google.com">Browse</a></p>
+                        <p>Drag your images here or <a href=""><input type="file" name="" hidden>Browse</a>
                         <h6>Supported:JPG,JPEG,PNG</h6>
                     </div>
+                </div>
+                <div class="addnew">
                     <button class="propertybtn">Add New Property</button>
                 </div>
+
             </form>
         </section>
         <section class="hustler-slider">
